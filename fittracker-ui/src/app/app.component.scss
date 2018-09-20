@@ -1,0 +1,15 @@
+.header {
+    display : flex;
+    border-bottom : solid; 
+    border-bottom-size : 0.5px; 
+    border-bottom-color : lightgrey;
+}
+
+img {
+    height : 140px;
+    width : 235px;
+}
+
+.header h1 {
+    margin-top : 2rem;
+}
