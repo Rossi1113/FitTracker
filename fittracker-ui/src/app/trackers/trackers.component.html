@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <form class="newRecordForm">
+      <h5 class="label"> New Excercise </h5>
+      <div class="formRow">
+        <div class="formCell">
+          <input type="text" name="excercise" id="excercise" [(ngModel)]="newTodo.excercise" placeholder="Excercise" class="form-control">
+        </div>
+        <div class="formCell">
+          <input name="category" id="category" [(ngModel)]="newTodo.category" placeholder="Category" class="form-control">
+        </div>
+      </div>
+      <div class="formRow">  
+        <div class="formCell">
+          <input name="duration" id="duration" [(ngModel)]="newTodo.duration" placeholder="Duration" class="form-control">
+        </div>
+        <div class="formCell">
+          <input name="calory" id="calory" [(ngModel)]="newTodo.calory" placeholder="Calory" class="form-control">
+        </div>
+      </div>
+      <div class="formBtn">
+          <button type="submit" class="btn btn-primary" (click)="create()">Add</button>
+      </div>
+    </form>
+
+    <div class="todos" *ngIf="todosList">
+      <table class="table">
+        <thead class="h">
+          <tr class="h">
+            <th class="h">Excercise</th>
+            <th class="h">Category</th>
+            <th class="h">Duration</th>
+            <th class="h">Calorie</th>
+            <th class="h">Date</th>
+            <th class="h">Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Bind double click method to support inline-edit -->
+          <tr class="todo" (dblclick)="editTodo(todo)" *ngFor="let todo of todosList">
+
+            <!-- If editTodo doesn't contain this todo, show plaintext -->
+            <!-- Otherwise show input -->
+            <ng-container *ngIf="!editTodos.includes(todo); else editTD">
+              <td>{{todo.excercise}}</td>
+              <td>{{todo.category}}</td>
+              <td>{{todo.duration}}</td>
+              <td>{{todo.calory}}</td>
+              <td>{{todo.date | date}}</td>
+              <!-- <app-tracker-detail [tracker]="todo"></app-tracker-detail> -->
+              <!-- <router-outlet></router-outlet> -->
+            </ng-container>
+
+            <ng-template #editTD>
+                <td><input type="text" name="excercise" id="excercise" (keypress)="submitTodo($event, todo)" [(ngModel)]="todo.excercise" placeholder="Excercise" class="form-control"></td>
+                <td><input type="text" name="category" id="category" (keypress)="submitTodo($event, todo)" [(ngModel)]="todo.category" placeholder="Category"
+                    class="form-control"></td>
+                <td><input type="text" name="duration" id="duration" (keypress)="submitTodo($event, todo)" [(ngModel)]="todo.duration" placeholder="Duration"
+                    class="form-control"></td>
+                <td><input type="text" name="calory" id="calory" (keypress)="submitTodo($event, todo)" [(ngModel)]="todo.calory" placeholder="Calory"
+                    class="form-control"></td>
+                <td>{{todo.date | date}}</td>
+            </ng-template>
+
+            <td class="options">
+              <button class="btn btn-info optionBtn">
+                <a routerLink="/detail/{{todo._id}}" style="color:white">
+                  <i  class="fa fa-eye"></i>
+                </a>
+              </button>
+              <button class="btn btn-success optionBtn">
+                  <i  class="fa fa-heart"></i>
+              </button>
+              <button class="btn btn-primary optionBtn" (click)="editTodo(todo)">
+                  <i  class="fa fa-pencil"></i>
+                </button>
+              <button class="btn btn-danger optionBtn" (click)="deleteTodo(todo)">
+                  <i  class="fa fa-trash"></i>
+                </button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+  </div>
+  <div class="col-md-2">
+    
+  </div>
+</div>
