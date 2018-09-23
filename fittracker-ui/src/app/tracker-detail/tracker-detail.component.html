@@ -1,0 +1,38 @@
+<h3 class="title"> Exercise Detail </h3>
+
+<table class="detail">
+    <tr class="row">
+        <div class="cell">
+            <h5>Exercise</h5>
+            <div>{{tracker.excercise}}</div>
+        </div>
+        <div class="cell">
+            <h5>Category</h5>
+            <div>{{tracker.category}}</div>
+        </div>
+    </tr>
+    <tr class="row">
+        <div class="cell">
+            <h5>Duration</h5>
+            <div>{{tracker.duration}}</div>
+        </div>
+        <div class="cell">
+            <h5>Calorie</h5>
+            <div>{{tracker.calory}}</div>
+        </div>
+    </tr>
+    <tr class="row">
+        <div class="cell">
+            <h5>Date</h5>
+            <div>{{tracker.date | date}}</div>
+        </div>
+    </tr>
+    <tr class="row">
+        <button class="btn btn-primary">
+            <a routerLink="/trackers">
+              Back
+            </a>
+        </button>
+    </tr>
+</table>
+

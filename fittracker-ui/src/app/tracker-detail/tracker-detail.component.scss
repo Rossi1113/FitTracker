@@ -1,0 +1,33 @@
+.title {
+    position: fixed;
+    left: 34%;
+    margin-top: 1rem;
+}
+
+.detail {
+    position: fixed;
+    left: 35%;
+    top: 30%;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 1rem;
+    
+}
+
+.cell {
+    width: 200px;
+    margin-right: 1rem;
+    border-bottom : solid; 
+    border-bottom-size : 0.1px; 
+    border-bottom-color : lightgrey;
+}
+
+label {
+    font-weight: bold;
+}
+
+button a {
+    color: white;
+}
