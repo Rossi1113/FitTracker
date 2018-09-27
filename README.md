@@ -1,4 +1,5 @@
-<h1>FitTracker App built on MEAN stack</h1>
+<h1>FitTracker App</h1>
+<h3> A fitness tracker app built on MEAN stack </h3>
 
 Project Architecture 
 The project is divided into 2 small projects : 
