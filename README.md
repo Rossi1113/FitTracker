@@ -16,3 +16,8 @@ Clone my project and follow the steps below, but you may need to config somethin
 5. Now your api layer should be up and you can use postman test it <br/>
 6. Run "ng serve --open" in mean-angular root folder, this will start angular server at localhost:4200. And this is the main places you can play with the app in your browser <br/>
 <br/>
+
+For me only (how to run it in my local) : <br/>
+1. run "cd ~; mongodbstart" <br/>
+2. run "cd ~/git/FitTracker/fittracker-api; npm start" <br/>
+3. run "cd ~/git/FitTracker/fittracker-ui/src/app; ng serve --open" <br/>
