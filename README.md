@@ -1,6 +1,8 @@
 <h1>FitTracker App</h1>
 <h3> A fitness tracker app built on MEAN stack </h3>
 
+<img style="-webkit-user-select: none;" src="https://media.giphy.com/media/fdzSFrkMozJWKgZ8qP/giphy.gif">
+
 <b>Project Architecture </b><br/>
 The project is divided into 2 small projects : 
 fittracker-api project sets up the backend stuff : using mongodb store the data, using express set up the restful api 
