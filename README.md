@@ -3,12 +3,12 @@
 
 <img style="-webkit-user-select: none;" src="https://media.giphy.com/media/fdzSFrkMozJWKgZ8qP/giphy.gif">
 
-<b>Project Architecture </b><br/>
+<h3>Project Architecture </h3>
 The project is divided into 2 small projects : 
 fittracker-api project sets up the backend stuff : using mongodb store the data, using express set up the restful api 
 fittracker-ui project sets up the frontend stuff : using angular build the ui calling rest api to show the data 
 
-<b>Set up step</b> <br/>
+<h3>Set up steps</h3>
 Clone my project and follow the steps below, but you may need to config something by yourself in some places
 
 1. Clone the project <br/>
@@ -20,6 +20,8 @@ Clone my project and follow the steps below, but you may need to config somethin
 <br/>
 
 For me only (how to run it in my local) : <br/>
+```bash
 1. run "cd ~; mongodbstart" <br/>
 2. run "cd ~/git/FitTracker/fittracker-api; npm start" <br/>
 3. run "cd ~/git/FitTracker/fittracker-ui/src/app; ng serve --open" <br/>
+```
